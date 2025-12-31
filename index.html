@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="独立游戏开发者作品集 - 代码与艺术的双生世界">
+  <title>个人网站 | 独立游戏开发者</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  </head>
+  <body>
+    <div id="app"></div>
+  
+  <!-- Settings Template -->
+  <template id="settings-template">
+    <div class="settings-container">
+      <button class="settings-toggle" aria-label="打开设置">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+      
+      <div class="settings-backdrop"></div>
+      
+      <aside class="settings-sidebar">
+        <div class="settings-header">
+          <h3 class="settings-title">设置</h3>
+        </div>
+        
+        <div class="settings-content">
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-label">锁定主视口</span>
+              <span class="setting-desc">防止误触滑动返回首屏</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-prevent-back">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-label">禁用扫描线</span>
+              <span class="setting-desc">关闭编程卡片的扫描特效</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-disable-scanline">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </template>
+
+  <template id="intro-template">
+    <section id="intro-section">
+      <canvas id="particles-canvas"></canvas>
+      <div class="intro-content">
+        <div class="intro-avatar-label">社媒常用头像：</div>
+        <div class="intro-avatars">
+          <div class="intro-logo">
+            <img src="/assets/avatar1.jpg" alt="头像1" class="avatar-image">
+          </div>
+          <div class="intro-logo">
+            <img src="/assets/avatar2.jpg" alt="头像2" class="avatar-image">
+          </div>
+          <div class="intro-logo">
+            <img src="/assets/avatar3.jpg" alt="头像3" class="avatar-image">
+          </div>
+        </div>
+        <div class="intro-nickname">社媒常用昵称：我是傻逼兼废物、我是傻逼、我是废物、我是煞笔、我是沙比、我是伞兵、我是费雾、我是伞兵兼费雾、活着好累我想死、不想活了我想死、初雪戈墨</div>
+        <h1 class="intro-title">你好，欢迎来到我的世界</h1>
+        <div class="intro-subtitle">
+          <span class="typewriter"></span>
+        </div>
+        <button class="intro-cta">
+          <span>点击进入 ↓</span>
+        </button>
+        <div class="scroll-hint">或向下滚动页面</div>
+      </div>
+      <div class="intro-desktop">
+        <button class="intro-desktop-toggle">我的电脑桌面 →</button>
+        <div class="intro-desktop-content">
+          <h2 class="intro-desktop-title">我的电脑桌面：</h2>
+          <p class="intro-desktop-subtitle">（仅展示部分软件，不代表全部软件）</p>
+          <div class="intro-desktop-image-wrapper">
+            <img src="/assets/desktop-screenshot.png" alt="我的电脑桌面" class="intro-desktop-image">
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="project-card-template">
+    <div class="project-card card-3d scanline">
+      <div class="project-card-inner">
+        <div class="project-card-number"></div>
+        <div class="project-category-badges"></div>
+        <div class="project-content">
+          <h3 class="project-title"></h3>
+          <div class="project-subtitle"></div>
+          <p class="project-description"></p>
+          <div class="project-meta">
+            <span class="project-meta-item">
+              <span class="project-meta-label">项目状态：</span>
+              <span class="project-status"></span>
+            </span>
+            <span class="project-meta-item">
+              <span class="project-meta-label">发布日期：</span>
+              <span class="project-release-date"></span>
+            </span>
+          </div>
+          <div class="project-meta">
+            <span class="project-meta-item project-meta-roles">
+              <span class="project-roles-text"></span>
+            </span>
+          </div>
+          <div class="project-meta">
+            <span class="project-meta-item">
+              <span class="project-meta-label">开发周期：</span>
+              <span class="project-development-cycle"></span>
+            </span>
+            <span class="project-meta-item">
+              <span class="project-meta-label">开发环境：</span>
+              <span class="project-development-env"></span>
+            </span>
+          </div>
+          <div class="project-tags"></div>
+          <div class="project-links"></div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="gallery-item-template">
+    <div class="gallery-item">
+      <div class="gallery-thumbnail">
+        <div class="gallery-item-number"></div>
+        <div class="gallery-category-badge"></div>
+        <img loading="lazy" alt="">
+        <button class="gallery-nav-arrow gallery-nav-prev hidden">‹</button>
+        <button class="gallery-nav-arrow gallery-nav-next hidden">›</button>
+        <div class="gallery-image-indicators hidden"></div>
+        <div class="gallery-image-label hidden"></div>
+      </div>
+      <div class="gallery-info">
+        <h3 class="gallery-title"></h3>
+        <p class="gallery-description"></p>
+        <div class="gallery-tags"></div>
+        <div class="gallery-meta">
+          <div class="gallery-meta-item gallery-creation-cycle"></div>
+          <div class="gallery-meta-item gallery-creation-environment"></div>
+        </div>
+        <div class="gallery-links"></div>
+        <div class="gallery-date"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="gallery-indicator-dot-template">
+    <span class="gallery-indicator-dot"></span>
+  </template>
+
+  <template id="gallery-tag-template">
+    <span class="gallery-tag"></span>
+  </template>
+
+  <template id="gallery-link-template">
+    <a class="gallery-link" target="_blank" rel="noopener noreferrer"></a>
+  </template>
+
+  <template id="code-world-template">
+    <div id="code-world">
+      <canvas class="world-canvas" id="code-canvas"></canvas>
+      <div class="world-content">
+        <h2 class="world-title">💻 编程作品</h2>
+        <p class="world-subtitle">Web开发 · 软件开发 · 游戏开发</p>
+        <div class="filter-section">
+          <div class="filter-tags"></div>
+          <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索作品..." id="code-search">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </div>
+        </div>
+        <p class="blur-disclaimer">不知道为什么，鼠标悬停在卡片上时会导致文字模糊，问了AI很久都没有解决。</p>
+        <div class="works-grid" id="projects-grid"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="art-world-template">
+    <div id="art-world">
+      <canvas class="world-canvas" id="art-canvas"></canvas>
+      <div class="world-content">
+        <h2 class="world-title">🎨 美术作品</h2>
+        <p class="world-subtitle">绘画 · 3D建模 · 动画制作</p>
+        <div class="filter-section">
+          <div class="filter-tags"></div>
+          <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索作品..." id="art-search">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="works-grid" id="artworks-grid"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="support-sidebar-template">
+    <aside id="support-sidebar">
+      <!-- 背景刻度尺装饰 -->
+      <div class="sidebar-ruler"></div>
+
+      <!-- 顶部装饰 HUD -->
+      <div class="sidebar-hud-top">
+        <!-- 雷达扫描 -->
+        <div class="hud-radar">
+          <div class="radar-circle"></div>
+          <div class="radar-sweep"></div>
+          <div class="radar-dot"></div>
+        </div>
+        <div class="hud-status">
+          <span class="status-dot"></span> SYSTEM_ONLINE
+        </div>
+        <div class="hud-hex-stream">
+          0x4F 0xA1 0xB2<br>
+          0x1C 0x88 0x9D<br>
+          0xE2 0x55 0x00<br>
+          LOADING...
+        </div>
+      </div>
+
+      <div class="sidebar-title">
+        <span class="sidebar-icon">💝</span> 赞助支持
+      </div>
+      <div class="qrcode-container"></div>
+
+      <!-- 底部装饰 HUD -->
+      <div class="sidebar-hud-bottom">
+        <!-- 散热风扇 -->
+        <div class="hud-fan">
+          <div class="fan-blade"></div>
+          <div class="fan-blade"></div>
+          <div class="fan-blade"></div>
+          <div class="fan-center"></div>
+        </div>
+        <div class="hud-graph">
+          <div class="graph-bar" style="--h: 60%"></div>
+          <div class="graph-bar" style="--h: 40%"></div>
+          <div class="graph-bar" style="--h: 80%"></div>
+          <div class="graph-bar" style="--h: 30%"></div>
+          <div class="graph-bar" style="--h: 90%"></div>
+        </div>
+        <div class="hud-label">CORE_TEMP: NORMAL</div>
+      </div>
+    </aside>
+  </template>
+
+  <template id="qrcode-item-template">
+    <div class="qrcode-item">
+      <div class="qrcode-label"></div>
+      <img class="qrcode-image" alt="">
+    </div>
+  </template>
+
+  <template id="modal-template">
+    <div class="modal" id="modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-container">
+        <button class="modal-close">×</button>
+        <div class="modal-content"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="filter-tag-template">
+    <button class="filter-tag"></button>
+  </template>
+
+  <template id="empty-state-template">
+    <div class="empty-state">
+      <div class="empty-state-icon">🔍</div>
+      <p class="empty-state-text"></p>
+    </div>
+  </template>
+
+  <template id="project-tag-template">
+    <span class="project-tag"></span>
+  </template>
+
+  <template id="category-badge-template">
+    <span class="project-category-badge"></span>
+  </template>
+
+  <template id="project-link-template">
+    <a class="project-link ripple" target="_blank" rel="noopener noreferrer"></a>
+  </template>
+
+  <template id="main-container-template">
+    <div id="main-container"></div>
+  </template>
+
+  <template id="divider-template">
+    <div id="divider"></div>
+  </template>
+
+  <template id="scroll-hint-template">
+    <div class="main-scroll-hint">
+      <p>继续向下，了解我的故事 ↓</p>
+    </div>
+  </template>
+
+  <!-- Modal 动态内容 templates（仅美术作品灯箱使用）-->
+  <template id="lightbox-image-container-template">
+    <div class="lightbox-image-container">
+      <div class="lightbox-image-wrapper">
+        <img class="lightbox-image" alt="">
+        <div class="lightbox-play-icon hidden">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="lightbox-image-label hidden"></div>
+    </div>
+  </template>
+
+  <template id="lightbox-video-template">
+    <video class="lightbox-video" controls></video>
+  </template>
+
+  <template id="lightbox-info-template">
+    <div class="lightbox-info"></div>
+  </template>
+
+  <template id="lightbox-title-template">
+    <h2 class="lightbox-title"></h2>
+  </template>
+
+  <template id="lightbox-description-template">
+    <p class="lightbox-description"></p>
+  </template>
+
+  <template id="lightbox-date-template">
+    <div class="lightbox-date"></div>
+  </template>
+
+  <template id="lightbox-category-template">
+    <div class="lightbox-category"></div>
+  </template>
+
+  <template id="lightbox-tags-template">
+    <div class="lightbox-tags"></div>
+  </template>
+
+  <template id="lightbox-tag-template">
+    <span class="lightbox-tag"></span>
+  </template>
+
+  <template id="lightbox-meta-template">
+    <div class="lightbox-meta"></div>
+  </template>
+
+  <template id="lightbox-meta-item-template">
+    <div class="lightbox-meta-item"></div>
+  </template>
+
+  <template id="lightbox-image-gallery-template">
+    <div class="lightbox-image-gallery"></div>
+  </template>
+
+  <template id="lightbox-links-template">
+    <div class="lightbox-links"></div>
+  </template>
+
+  <template id="lightbox-link-template">
+    <a class="lightbox-link" target="_blank" rel="noopener noreferrer"></a>
+  </template>
+
+  <template id="about-section-template">
+    <section id="about-section">
+      <canvas class="about-canvas"></canvas>
+      <div class="about-vertical-text">没钱却依旧为爱发电第n人</div>
+      <div class="about-content">
+        <h2 class="about-title">关于我</h2>
+      </div>
+      <!-- 移动端侧边栏（桌面端隐藏） -->
+      <aside class="about-support-sidebar">
+        <div class="sidebar-title">
+          <span class="sidebar-icon">💝</span> 赞助支持
+        </div>
+        <div class="qrcode-container"></div>
+      </aside>
+    </section>
+  </template>
+
+  <template id="about-paragraph-template">
+    <p class="about-paragraph"></p>
+  </template>
+
+  <template id="reality-section-template">
+    <section id="reality-section">
+      <canvas class="reality-canvas"></canvas>
+      <div class="reality-content">
+        <h2 class="reality-title">冰冷冷的现实</h2>
+        <div class="reality-intro">
+          <p class="reality-intro-text">上一个页面我已经直言不讳，毫不保留的全部说出来了，那我继续：</p>
+          <p class="reality-intro-text">免费开源的项目和ACGN同人二创做多了，我悟出以下事实：</p>
+        </div>
+        <div class="reality-items-grid"></div>
+      </div>
+    </section>
+  </template>
+
+  <template id="reality-item-template">
+    <div class="reality-item">
+      <div class="reality-number"></div>
+      <p class="reality-text"></p>
+    </div>
+  </template>
+
+  <template id="testament-section-template">
+    <section id="testament-section">
+      <div class="testament-content">
+        <h2 class="testament-title">遗书</h2>
+        <p class="testament-subtitle">敬请期待</p>
+        <div class="testament-main-content"></div>
+        <div class="testament-footnotes hidden"></div>
+      </div>
+    </section>
+  </template>
+
+  <template id="testament-paragraph-template">
+    <div class="testament-paragraph">
+      <p class="testament-text"></p>
+    </div>
+  </template>
+
+  <template id="testament-footnote-template">
+    <div class="testament-footnote">
+      <span class="testament-footnote-number"></span>
+      <span class="testament-footnote-text"></span>
+    </div>
+  </template>
+
+  <template id="testament-tooltip-template">
+    <div class="testament-footnote-tooltip" data-tooltip="true"></div>
+  </template>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

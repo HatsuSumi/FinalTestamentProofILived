@@ -1,0 +1,441 @@
+/* 模态窗样式 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-modal);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+/* 阻止 body 滚动 */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: fadeIn var(--transition-base);
+}
+
+.modal-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: var(--gray-900);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  z-index: 1;
+  animation: scaleIn var(--transition-base);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal.closing .modal-container {
+  animation: scaleOut var(--transition-base);
+}
+
+.modal.closing .modal-backdrop {
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: var(--text-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  line-height: 1;
+  padding: 0;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-content {
+  padding: var(--spacing-2xl);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+/* 模态框内容区域滚动条美化 */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--art-primary), var(--art-secondary)); /* 粉色到橙色渐变 */
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(255, 107, 157, 0.5); /* 发光效果 */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--art-primary), var(--art-secondary)); /* 悬停时颜色不变 */
+  box-shadow: 0 0 6px rgba(255, 107, 157, 0.5);
+}
+
+/* 项目模态窗 */
+.project-modal {
+  max-width: 800px;
+}
+
+.modal-title {
+  font-size: var(--text-3xl);
+  font-weight: bold;
+  color: var(--code-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.modal-description {
+  font-size: var(--text-lg);
+  color: var(--gray-300);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.modal-tag {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--code-primary);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  font-size: var(--text-sm);
+}
+
+.modal-links {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.modal-link {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  display: inline-block;
+}
+
+.modal-link.btn-primary {
+  background: var(--code-primary);
+  color: var(--code-bg);
+}
+
+.modal-link.btn-primary:hover {
+  background: var(--code-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.modal-link.btn-secondary {
+  background: var(--code-secondary);
+  color: var(--white);
+}
+
+.modal-link.btn-secondary:hover {
+  background: var(--code-primary);
+  transform: translateY(-2px);
+}
+
+.modal-link.btn-accent {
+  background: var(--code-accent);
+  color: var(--code-bg);
+}
+
+.modal-link.btn-accent:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* 美术作品灯箱 */
+.artwork-lightbox {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  width: 100%;
+  gap: var(--spacing-lg);
+}
+
+/* 图片画廊横向滚动容器 */
+.lightbox-image-gallery {
+  display: flex;
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--spacing-sm) 0;
+  max-width: 900px;
+}
+
+.lightbox-image-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.lightbox-image-gallery::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.lightbox-image-gallery::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--art-primary), var(--art-secondary)); /* 粉色到橙色渐变 */
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(255, 107, 157, 0.5); /* 发光效果 */
+}
+
+.lightbox-image-gallery::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, var(--art-primary), var(--art-secondary)); /* 悬停时颜色不变 */
+  box-shadow: 0 0 6px rgba(255, 107, 157, 0.5);
+}
+
+.lightbox-image-gallery .lightbox-image-container {
+  flex-shrink: 0;
+  width: auto;
+  max-width: 600px;
+  scroll-snap-align: start;
+}
+
+.lightbox-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+.lightbox-image-label {
+  padding: 6px 16px;
+  background: rgba(255, 107, 157, 0.9);
+  color: var(--white);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.lightbox-image-wrapper.clickable {
+  cursor: pointer;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 60vh;
+  display: block;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  transition: transform var(--transition-base);
+}
+
+.lightbox-image-wrapper:hover .lightbox-image {
+  transform: scale(1.02);
+}
+
+.lightbox-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 107, 237, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all var(--transition-base);
+  box-shadow: 0 8px 32px rgba(255, 107, 237, 0.5);
+}
+
+.lightbox-image-wrapper:hover .lightbox-play-icon:not(.hidden) {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.lightbox-play-icon svg {
+  width: 40px;
+  height: 40px;
+  color: var(--white);
+  margin-left: 4px; /* 视觉居中调整 */
+}
+
+.lightbox-video {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  background: black;
+}
+
+.lightbox-info {
+  width: 100%;
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.lightbox-title {
+  font-size: var(--text-2xl);
+  font-weight: bold;
+  color: var(--art-primary);
+  margin: 0;
+}
+
+.lightbox-description {
+  font-size: var(--text-base);
+  color: var(--gray-300);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lightbox-date,
+.lightbox-category {
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+}
+
+.lightbox-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.lightbox-tag {
+  padding: 4px 10px;
+  font-size: var(--text-xs);
+  background: rgba(255, 107, 237, 0.15);
+  color: var(--art-primary);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 107, 237, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lightbox-meta-item {
+  font-size: var(--text-sm);
+  color: var(--gray-300);
+  padding: 6px 10px;
+  background: rgba(255, 107, 237, 0.1);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--art-primary);
+}
+
+.lightbox-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.lightbox-link {
+  padding: 8px 16px;
+  font-size: var(--text-sm);
+  background: linear-gradient(135deg, rgba(255, 107, 237, 0.2), rgba(255, 107, 237, 0.1));
+  color: var(--art-primary);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 107, 237, 0.4);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-link:hover {
+  background: linear-gradient(135deg, rgba(255, 107, 237, 0.3), rgba(255, 107, 237, 0.2));
+  border-color: var(--art-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 237, 0.3);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .modal-container {
+    max-width: 95%;
+    max-height: 95%;
+  }
+
+  .modal-content {
+    padding: var(--spacing-lg);
+    max-height: 95vh;
+  }
+
+  .modal-title {
+    font-size: var(--text-2xl);
+  }
+
+  .lightbox-image {
+    max-height: 75vh;
+  }
+
+  .lightbox-image-gallery .lightbox-image-container {
+    max-width: 100%;
+  }
+
+  .modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: var(--text-2xl);
+  }
+}
+

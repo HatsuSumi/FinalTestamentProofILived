@@ -17,14 +17,14 @@ export class SupportSidebar implements Component {
     // 微信二维码
     const wechatItem = this.createQRCodeItem(
       '微信',
-      '/assets/qrcodes/wechat.png',
+      `${import.meta.env.BASE_URL}assets/qrcodes/wechat.png`,
       '微信赞助二维码'
     );
 
     // 支付宝二维码
     const alipayItem = this.createQRCodeItem(
       '支付宝',
-      '/assets/qrcodes/alipay.png',
+      `${import.meta.env.BASE_URL}assets/qrcodes/alipay.png`,
       '支付宝赞助二维码'
     );
 

@@ -51,7 +51,7 @@ export class GalleryItem implements Component {
 
     // 设置缩略图（必须存在）
     const img = queryIn<HTMLImageElement>(item, '.gallery-thumbnail img');
-    img.src = this.artwork.thumbnail;
+    img.src = `${import.meta.env.BASE_URL}${this.artwork.thumbnail.slice(1)}`;
     img.alt = this.artwork.title;
 
     // 如果有多张图片，设置导航箭头和指示器
@@ -238,7 +238,7 @@ export class GalleryItem implements Component {
       img.classList.add(slideInClass);
 
       // 更新图片
-      img.src = this.allImages[this.currentImageIndex];
+      img.src = `${import.meta.env.BASE_URL}${this.allImages[this.currentImageIndex].slice(1)}`;
 
       // 更新指示器
       const dots = indicators.querySelectorAll('.gallery-indicator-dot');

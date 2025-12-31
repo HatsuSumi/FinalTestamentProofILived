@@ -70,7 +70,7 @@ export class Modal implements Component {
     const imageContainer = cloneTemplate<HTMLDivElement>('lightbox-image-container-template');
     const imageWrapper = queryIn<HTMLElement>(imageContainer, '.lightbox-image-wrapper');
     const image = queryIn<HTMLImageElement>(imageContainer, '.lightbox-image');
-    image.src = artwork.image;
+    image.src = `${import.meta.env.BASE_URL}${artwork.image.slice(1)}`;
     image.alt = artwork.title;
 
     // 显示播放图标并添加点击事件
@@ -105,7 +105,7 @@ export class Modal implements Component {
     allImages.forEach((imageUrl, index) => {
       const imageContainer = cloneTemplate<HTMLDivElement>('lightbox-image-container-template');
       const image = queryIn<HTMLImageElement>(imageContainer, '.lightbox-image');
-      image.src = imageUrl;
+      image.src = `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`;
       image.alt = `${artwork.title} - ${index === 0 ? '成品图' : '过程图' + index}`;
       
       // 移除播放图标（图片作品不需要）
@@ -237,7 +237,7 @@ export class Modal implements Component {
 
     // 创建并显示视频播放器
     const video = cloneTemplate<HTMLVideoElement>('lightbox-video-template');
-    video.src = videoUrl;
+    video.src = `${import.meta.env.BASE_URL}${videoUrl.slice(1)}`;
     video.autoplay = true;
     wrapper.appendChild(video);
 

@@ -64,8 +64,8 @@ export class AboutSection implements Component {
     if (!sidebarContainer) return;
 
     const qrcodes = [
-      { label: '微信', image: '/assets/qrcodes/wechat.png' },
-      { label: '支付宝', image: '/assets/qrcodes/alipay.png' }
+      { label: '微信', image: `${import.meta.env.BASE_URL}assets/qrcodes/wechat.png` },
+      { label: '支付宝', image: `${import.meta.env.BASE_URL}assets/qrcodes/alipay.png` }
     ];
 
     qrcodes.forEach(qr => {

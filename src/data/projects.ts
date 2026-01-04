@@ -30,7 +30,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '可视化已完成，但前端网页呈半成品状态。',
     releaseDate: '视频2024-12-07，源码2025-12-22',
-    roles: ['架构设计', '数据分析', '前端', 'UI/UX', '测试'],
+    roles: ['架构设计', '数据分析', '前端', 'UI/UX', '测试', '维护'],
     links: [
       { name: 'B站', url: 'https://www.bilibili.com/video/BV1mci1YiE4M/' },
       { name: '贴吧', url: 'https://tieba.baidu.com/p/9228689566' },
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '已完成。',
     releaseDate: '视频2025-02-26，源码2025-12-23',
-    roles: ['架构设计', '数据分析', '前端', 'UI/UX', '后端', '测试'],
+    roles: ['架构设计', '数据分析', '前端', 'UI/UX', '后端', '测试', '维护'],
     links: [
       { name: 'B站', url: 'https://www.bilibili.com/video/BV1KLPLeXEwN/' },
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/ISML-2024/' },
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '在提名阶段后停更，呈半成品状态。',
     releaseDate: '2025-02-14',
-    roles: ['架构设计', '数据分析', '前端', 'UI/UX', '测试'],
+    roles: ['架构设计', '数据分析', '前端', 'UI/UX', '测试', '维护'],
     links: [
       { name: '贴吧', url: 'https://tieba.baidu.com/p/9493543244' },
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/ISML-2024/' },
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '已停更。',
     releaseDate: '2025-06-24',
-    roles: ['架构设计', '前端', 'UI/UX', '测试'],
+    roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
       { name: '主页', url: 'https://zingy-jelly-8029b4.netlify.app/'}
     ]
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '已完成。',
     releaseDate: '2025-11-25',
-    roles: ['架构设计', '前端', 'UI/UX', '测试'],
+    roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
       { name: 'B站', url: 'https://www.bilibili.com/video/BV1iySjBcEwy/'},
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/CardScroller'},
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '持续更新中。',
     releaseDate: '2025-12-31',
-    roles: ['架构设计', '前端', 'UI/UX', '测试', '运维'],
+    roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/Racehorse-Memorial'},
       { name: '主页', url: 'https://hatsusumi.github.io/Racehorse-Memorial/'}
@@ -135,7 +135,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '已完成。',
     releaseDate: '2025-12-21',
-    roles: ['架构设计', '程序', 'UI/UX', '测试'],
+    roles: ['架构设计', '程序', 'UI/UX', '测试', '维护'],
     links: [
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/Omni-Project-Stats/'}
     ]
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '已完成。',
     releaseDate: '2025-12-23',
-    roles: ['架构设计', '程序', '测试'],
+    roles: ['架构设计', '程序', '测试', '维护'],
     links: [
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/HumanLapse-One-Click-Video-Speed-Controller/'}
     ]
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '持续更新中。',
     releaseDate: '2025-12-31',
-    roles: ['架构设计', '前端', 'UI/UX', '测试', '运维'],
+    roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/FinalTestamentProofILived'},
       { name: '主页', url: 'https://hatsusumi.github.io/FinalTestamentProofILived/'}
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '待发布。',
     releaseDate: '2026-01',
-    roles: ['架构设计', '前端', 'UI/UX', '测试'],
+    roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
 
     ]

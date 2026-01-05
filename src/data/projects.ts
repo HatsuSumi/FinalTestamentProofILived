@@ -176,7 +176,7 @@ export const projects: Project[] = [
   {
     id: 'project-10',
     title: '图片抓取与转换浏览器插件项目',
-    subtitle: 'mage-Hawk',
+    subtitle: 'Image-Hawk',
     description: '一个功能强大的浏览器扩展，支持12种图片来源检测，提供JPEG、PNG、WebP、GIF、AVIF、SVG六种格式的下载与转换功能。支持防盗链图片下载、动态内容检测、精准定位、高级过滤规则、侧边栏视图等专业功能。',
     tags: ['TypeScript', 'HTML5', 'React', 'Vite', 'Tailwind CSS', 'Chrome Extension'],
     categories: ['extension'],
@@ -188,6 +188,20 @@ export const projects: Project[] = [
     links: [
 
     ]
+  },
+  {
+    id: 'project-11',
+    title: '未来的独立游戏项目',
+    subtitle: 'Future-Game',
+    description: '一个未来的独立游戏项目，目前正在构思中，属于超先导预告了。',
+    tags: ['Unity', '模拟养成', '视觉小说'],
+    categories: ['game'],
+    developmentCycle: '4-6年',
+    developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    status: '待发布。',
+    releaseDate: 'YYYY-MM-DD',
+    roles: ['程序', '美术', '音乐', '策划', '剧本'],
+    links: []
   },
 ];
 

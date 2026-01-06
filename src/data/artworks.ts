@@ -203,7 +203,7 @@ export const artworks: Artwork[] = [
     ],
     processLabels: ['细化', '线稿', '对比', '原图'],
     links: [
-      { name: 'GameKee帖子', url: 'https://www.bilibili.com/video/BV1xV411w7gf/' }
+      { name: 'GameKee帖子', url: 'https://www.gamekee.com/hw/688956.html' }
     ]
   }
 ];

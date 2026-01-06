@@ -104,9 +104,21 @@ export class Modal implements Component {
     // 添加所有图片
     allImages.forEach((imageUrl, index) => {
       const imageContainer = cloneTemplate<HTMLDivElement>('lightbox-image-container-template');
+      const imageWrapper = queryIn<HTMLElement>(imageContainer, '.lightbox-image-wrapper');
       const image = queryIn<HTMLImageElement>(imageContainer, '.lightbox-image');
       image.src = `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`;
       image.alt = `${artwork.title} - ${index === 0 ? '成品图' : '过程图' + index}`;
+      
+      // 添加点击事件，打开全屏查看
+      imageWrapper.classList.add('clickable');
+      addEvent(imageWrapper, 'click', () => {
+        window.dispatchEvent(new CustomEvent('openImageViewer', {
+          detail: {
+            src: image.src,
+            alt: image.alt
+          }
+        }));
+      });
       
       // 移除播放图标（图片作品不需要）
       const playIcon = queryIn<HTMLElement>(imageContainer, '.lightbox-play-icon');

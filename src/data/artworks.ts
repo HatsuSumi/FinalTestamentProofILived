@@ -142,5 +142,69 @@ export const artworks: Artwork[] = [
       { name: 'Steam创意工坊', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3030053645' }
     ]
   },
+  {
+    id: 'art-7',
+    title: '手游《地平线行者》蕾雅角色立绘临摹',
+    image: '/assets/artworks/art-7/Leah_Line art.jpg',
+    thumbnail: '/assets/artworks/art-7/Leah_Line art.jpg',
+    category: 'painting',
+    tags: ['线稿', '临摹', '蕾雅', '《地平线行者》'],
+    description: '绘画总用时：10h58m24s，原图分辨率：2104*3844，临摹用分辨率：2104*3844。',
+    date: '2025-12-08-12-09',
+    creationCycle: '2天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-7/Leah_Comparison.jpg',
+      '/assets/artworks/art-7/Leah_Original image.jpg'
+    ],
+    processLabels: ['线稿', '对比', '原图'],
+    links: [
+      { name: 'GameKee帖子', url: 'https://www.gamekee.com/hw/685096.html' }
+    ]
+  },
+  {
+    id: 'art-8',
+    title: '手游《地平线行者》格里泽尔达角色立绘临摹',
+    image: '/assets/artworks/art-8/Griselda_Line art.jpg',
+    thumbnail: '/assets/artworks/art-8/Griselda_Line art.jpg',
+    category: 'painting',
+    tags: ['线稿', '临摹', '格里泽尔达', '《地平线行者》'],
+    description: '绘画总用时：5h11m55s，原图分辨率：1000*1000，临摹用分辨率：1000*1000。',
+    date: '2026-01-02',
+    creationCycle: '1天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-8/Griselda_Comparison.jpg',
+      '/assets/artworks/art-8/Griselda_Original image.png'
+    ],
+    processLabels: ['线稿', '对比', '原图'],
+    links: [
+      { name: 'GameKee帖子', url: 'https://www.gamekee.com/hw/688557.html' }
+    ]
+  },
+  {
+    id: 'art-9',
+    title: '手游《地平线行者》艾弗里特角色立绘临摹',
+    image: '/assets/artworks/art-9/Everette_Refinement.png',
+    thumbnail: '/assets/artworks/art-9/Everette_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '蕾雅', '《地平线行者》'],
+    description: '绘画总用时：13h24m31s，原图分辨率：2048*2048，临摹用分辨率：1201*1506。',
+    date: '2025-01-03-01-06',
+    creationCycle: '4天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-9/Everette_Line art.png',
+      '/assets/artworks/art-9/Everette_Comparison.png',
+      '/assets/artworks/art-9/Everette_Original image.png'
+    ],
+    processLabels: ['细化', '线稿', '对比', '原图'],
+    links: [
+      { name: 'GameKee帖子', url: 'https://www.bilibili.com/video/BV1xV411w7gf/' }
+    ]
+  }
 ];
 

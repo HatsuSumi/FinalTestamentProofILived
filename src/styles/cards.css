@@ -408,7 +408,7 @@
   transition: transform var(--transition-slow);
 }
 
-.gallery-item:hover .gallery-thumbnail img {
+.gallery-item:hover .gallery-thumbnail img:not(.slide-out-left):not(.slide-out-right):not(.slide-in-left):not(.slide-in-right):not(.slide-center) {
   transform: translateX(0) scale(1.1);
 }
 

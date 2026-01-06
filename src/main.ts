@@ -16,6 +16,7 @@ import { CodeWorld } from './components/CodeWorld';
 import { ArtWorld } from './components/ArtWorld';
 import { SupportSidebar } from './components/SupportSidebar';
 import { Modal } from './components/Modal';
+import { ImageViewer } from './components/ImageViewer';
 import { AboutSection } from './components/AboutSection';
 import { RealitySection } from './components/RealitySection';
 import { TestamentSection } from './components/TestamentSection';
@@ -59,6 +60,7 @@ class App {
   private artWorld: ArtWorld;
   private supportSidebar: SupportSidebar;
   private modal: Modal;
+  private imageViewer: ImageViewer;
   private aboutSection: AboutSection;
   private realitySection: RealitySection;
   private testamentSection: TestamentSection;
@@ -289,6 +291,7 @@ class App {
     this.artWorld = new ArtWorld();
     this.supportSidebar = new SupportSidebar();
     this.modal = new Modal();
+    this.imageViewer = new ImageViewer();
     this.aboutSection = new AboutSection();
     this.realitySection = new RealitySection();
     this.testamentSection = new TestamentSection();
@@ -333,6 +336,9 @@ class App {
     
     // 添加设置组件
     document.body.appendChild(this.settingsPanel.element);
+    
+    // 添加图片查看器
+    document.body.appendChild(this.imageViewer.element);
 
     // 添加模态窗
     this.app.appendChild(this.modal.element);

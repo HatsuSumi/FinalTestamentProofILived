@@ -326,24 +326,29 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80%;
+  width: 40%;
   height: 4px;
-  background: linear-gradient(to right, transparent, rgba(255, 107, 157, 0.6), transparent);
-  transform-origin: center;
+  background: linear-gradient(to right, transparent, rgba(255, 107, 157, 0.8));
+  transform-origin: left center;
+  transform: translate(0, -50%);
   animation: fanRotate 2s linear infinite;
 }
 
+.fan-blade:nth-child(1) {
+  animation-delay: 0s;
+}
+
 .fan-blade:nth-child(2) {
-  transform: rotate(60deg);
+  animation-delay: -0.667s; /* 延迟 1/3 周期 = 120度偏移 */
 }
 
 .fan-blade:nth-child(3) {
-  transform: rotate(120deg);
+  animation-delay: -1.333s; /* 延迟 2/3 周期 = 240度偏移 */
 }
 
 @keyframes fanRotate {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% { transform: translate(0, -50%) rotate(0deg); }
+  100% { transform: translate(0, -50%) rotate(360deg); }
 }
 
 .fan-center {

@@ -198,7 +198,7 @@ export const artworks: Artwork[] = [
     processImages:
     [
       '/assets/artworks/art-9/Everette_Line art.png',
-      '/assets/artworks/art-9/Everette_Comparison_V2.png',
+      '/assets/artworks/art-9/Everette_Comparison.png',
       '/assets/artworks/art-9/Everette_Original image.png'
     ],
     processLabels: ['细化', '线稿', '对比', '原图'],

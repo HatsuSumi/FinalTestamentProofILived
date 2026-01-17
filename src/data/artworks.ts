@@ -205,6 +205,48 @@ export const artworks: Artwork[] = [
     links: [
       { name: 'GameKee帖子', url: 'https://www.gamekee.com/hw/688956.html' }
     ]
+  },
+  {
+    id: 'art-10',
+    title: '《BanG Dream!》系列角色高松灯立绘',
+    image: '/assets/artworks/art-10/Takamatsu Tomori_Refinement.png',
+    thumbnail: '/assets/artworks/art-10/Takamatsu Tomori_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '高松灯', '《BanG Dream!》', 'MyGo!!!!!'],
+    description: '绘画总用时：3h47m42s，原图分辨率：1000*1514，临摹用分辨率：1000*1514。',
+    date: '2025-01-10-01-11',
+    creationCycle: '2天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-10/Takamatsu Tomori_Comparison.png',
+      '/assets/artworks/art-10/Takamatsu Tomori_Original image.png'
+    ],
+    processLabels: ['细化', '对比', '原图'],
+    links: [
+      
+    ]
+  },
+  {
+    id: 'art-11',
+    title: '《BanG Dream!》系列角色千早爱音立绘',
+    image: '/assets/artworks/art-11/Chihaya Anon_Refinement.png',
+    thumbnail: '/assets/artworks/art-11/Chihaya Anon_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '千早爱音', '《BanG Dream!》', 'MyGo!!!!!'],
+    description: '绘画总用时：5h34m32s，原图分辨率：1000*1514，临摹用分辨率：1000*1514。',
+    date: '2025-01-16-01-17',
+    creationCycle: '2天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-11/Chihaya Anon_Comparison.png',
+      '/assets/artworks/art-11/Chihaya Anon_Original image.png'
+    ],
+    processLabels: ['细化', '对比', '原图'],
+    links: [
+      
+    ]
   }
 ];
 

@@ -208,7 +208,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'art-10',
-    title: '《BanG Dream!》系列角色高松灯立绘',
+    title: '《BanG Dream!》系列角色高松灯立绘临摹',
     image: '/assets/artworks/art-10/Takamatsu Tomori_Refinement.png',
     thumbnail: '/assets/artworks/art-10/Takamatsu Tomori_Refinement.png',
     category: 'painting',
@@ -229,7 +229,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'art-11',
-    title: '《BanG Dream!》系列角色千早爱音立绘',
+    title: '《BanG Dream!》系列角色千早爱音立绘临摹',
     image: '/assets/artworks/art-11/Chihaya Anon_Refinement.png',
     thumbnail: '/assets/artworks/art-11/Chihaya Anon_Refinement.png',
     category: 'painting',

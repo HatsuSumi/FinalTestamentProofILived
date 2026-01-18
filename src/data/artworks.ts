@@ -20,6 +20,7 @@ export const artworks: Artwork[] = [
     //     '/assets/artworks/character-color.jpg',    // 上色
     //   ],
     //   processLabels: ['成品', '草稿', '线稿', '上色'],  // 第1个对应主图，后续对应processImages
+    //   processVideoUrl: '/assets/artworks/character-process.mp4',  // 🆕 可选：创作过程视频（会显示「查看绘画/建模过程」按钮）
     //   links: [
     //     { name: 'B站', url: 'https://www.bilibili.com/video/xxxxx' },
     //     { name: 'Pixiv', url: 'https://www.pixiv.net/artworks/xxxxx' }
@@ -41,6 +42,7 @@ export const artworks: Artwork[] = [
     //   videoUrl: 'https://www.bilibili.com/video/BV1xxxxxx',  // ⚠️ 动画必须有视频链接
     //   // ❌ 动画不需要 processImages
     //   // ❌ 动画不需要 processLabels
+    //   // ❌ 动画不需要 processVideoUrl（动画类作品不显示「查看过程」按钮）
     //   links: [
     //     { name: 'B站', url: 'https://www.bilibili.com/video/BV1xxxxxx' }
     //   ]
@@ -223,6 +225,7 @@ export const artworks: Artwork[] = [
       '/assets/artworks/art-10/Takamatsu Tomori_Original image.png'
     ],
     processLabels: ['细化', '对比', '原图'],
+    processVideoUrl: '/assets/artworks/art-10/Takamatsu Tomori_Video.mp4',
     links: [
       
     ]

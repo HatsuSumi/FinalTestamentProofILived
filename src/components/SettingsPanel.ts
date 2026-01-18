@@ -14,7 +14,8 @@ export class SettingsPanel implements Component {
   // 设置状态
   public state = {
     preventBackToHome: false, // 防止误触返回首屏
-    disableScanline: false    // 禁用扫描线动画
+    disableScanline: false,   // 禁用扫描线动画
+    layoutMode: 'horizontal' as 'horizontal' | 'vertical' // 作品集布局模式
   };
 
   constructor() {
@@ -36,9 +37,18 @@ export class SettingsPanel implements Component {
     // 2. 初始化开关状态
     const preventToggle = queryIn<HTMLInputElement>(this.sidebar, '#setting-prevent-back');
     const scanlineToggle = queryIn<HTMLInputElement>(this.sidebar, '#setting-disable-scanline');
+    const layoutHorizontal = queryIn<HTMLInputElement>(this.sidebar, '#setting-layout-horizontal');
+    const layoutVertical = queryIn<HTMLInputElement>(this.sidebar, '#setting-layout-vertical');
 
     preventToggle.checked = this.state.preventBackToHome;
     scanlineToggle.checked = this.state.disableScanline;
+    
+    // 初始化布局单选按钮
+    if (this.state.layoutMode === 'horizontal') {
+      layoutHorizontal.checked = true;
+    } else {
+      layoutVertical.checked = true;
+    }
 
     return container;
   }
@@ -61,6 +71,22 @@ export class SettingsPanel implements Component {
       this.state.disableScanline = (e.target as HTMLInputElement).checked;
       this.saveSettings();
       this.applyScanlineSetting();
+    });
+
+    // 设置项：布局模式
+    const layoutHorizontal = queryIn<HTMLInputElement>(this.sidebar, '#setting-layout-horizontal');
+    const layoutVertical = queryIn<HTMLInputElement>(this.sidebar, '#setting-layout-vertical');
+    
+    addEvent(layoutHorizontal, 'change', () => {
+      this.state.layoutMode = 'horizontal';
+      this.saveSettings();
+      this.applyLayoutSetting();
+    });
+    
+    addEvent(layoutVertical, 'change', () => {
+      this.state.layoutMode = 'vertical';
+      this.saveSettings();
+      this.applyLayoutSetting();
     });
   }
 
@@ -103,6 +129,7 @@ export class SettingsPanel implements Component {
 
   private applySettings(): void {
     this.applyScanlineSetting();
+    this.applyLayoutSetting();
   }
 
   private applyScanlineSetting(): void {
@@ -110,6 +137,25 @@ export class SettingsPanel implements Component {
       document.body.classList.add('no-scanline');
     } else {
       document.body.classList.remove('no-scanline');
+    }
+  }
+
+  public applyLayoutSetting(): void {
+    const mainContainer = document.querySelector('#main-container');
+    const divider = document.querySelector('#divider');
+    
+    if (!mainContainer) return;
+    
+    if (this.state.layoutMode === 'vertical') {
+      mainContainer.classList.add('layout-vertical');
+      if (divider) {
+        divider.classList.add('hidden');
+      }
+    } else {
+      mainContainer.classList.remove('layout-vertical');
+      if (divider) {
+        divider.classList.remove('hidden');
+      }
     }
   }
 }

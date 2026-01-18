@@ -158,6 +158,23 @@ export class Modal implements Component {
     title.textContent = artwork.title;
     info.appendChild(title);
 
+    // 查看过程按钮（仅非动画作品且有过程视频时显示）
+    if (artwork.category !== 'animation' && artwork.processVideoUrl) {
+      const processBtn = cloneTemplate<HTMLButtonElement>('lightbox-process-button-template');
+      const categoryText = artwork.category === 'painting' ? '绘画' : '建模';
+      processBtn.textContent = `查看${categoryText}过程`;
+      
+      addEvent(processBtn, 'click', () => {
+        // 触发全局事件，打开视频播放器
+        const event = new CustomEvent('openProcessVideo', {
+          detail: artwork
+        });
+        window.dispatchEvent(event);
+      });
+      
+      info.appendChild(processBtn);
+    }
+
     // 描述
     if (artwork.description) {
       const description = cloneTemplate<HTMLParagraphElement>('lightbox-description-template');

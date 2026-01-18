@@ -345,6 +345,27 @@ body.modal-open {
   margin: 0;
 }
 
+/* 查看过程按钮（模态框内） */
+.lightbox-process-btn {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.9), rgba(255, 163, 77, 0.9));
+  border: 2px solid rgba(255, 107, 157, 0.5);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.lightbox-process-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 1), rgba(255, 163, 77, 1));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.5);
+}
+
 .lightbox-description {
   font-size: var(--text-base);
   color: var(--gray-300);

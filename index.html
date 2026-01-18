@@ -48,6 +48,23 @@
               <span class="toggle-slider"></span>
             </label>
           </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-label">作品集布局</span>
+              <span class="setting-desc">切换作品集页面的布局方式（桌面端和12.9寸平板端生效，移动端强制垂直布局）</span>
+            </div>
+            <div class="layout-options">
+              <label class="layout-option">
+                <input type="radio" name="layout-mode" value="horizontal" id="setting-layout-horizontal">
+                <span class="layout-option-label">左右排列</span>
+              </label>
+              <label class="layout-option">
+                <input type="radio" name="layout-mode" value="vertical" id="setting-layout-vertical">
+                <span class="layout-option-label">上下排列</span>
+              </label>
+            </div>
+          </div>
         </div>
       </aside>
     </div>
@@ -145,6 +162,7 @@
         <div class="gallery-image-label hidden"></div>
       </div>
       <div class="gallery-info">
+        <button class="gallery-process-btn hidden"></button>
         <h3 class="gallery-title"></h3>
         <p class="gallery-description"></p>
         <div class="gallery-tags"></div>
@@ -356,12 +374,30 @@
     </div>
   </template>
 
+  <!-- 全屏视频播放器 -->
+  <template id="video-player-template">
+    <div class="video-player">
+      <div class="video-player-backdrop"></div>
+      <div class="video-player-container">
+        <button class="video-player-close" title="关闭">×</button>
+        <div class="video-player-content">
+          <h3 class="video-player-title"></h3>
+          <video class="video-player-video" controls autoplay></video>
+        </div>
+      </div>
+    </div>
+  </template>
+
   <template id="lightbox-info-template">
     <div class="lightbox-info"></div>
   </template>
 
   <template id="lightbox-title-template">
     <h2 class="lightbox-title"></h2>
+  </template>
+
+  <template id="lightbox-process-button-template">
+    <button class="lightbox-process-btn"></button>
   </template>
 
   <template id="lightbox-description-template">

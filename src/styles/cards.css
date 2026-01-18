@@ -521,6 +521,37 @@
   min-height: 0;
 }
 
+/* 查看绘画/建模过程按钮 */
+.gallery-process-btn {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  
+  /* 样式 */
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.9), rgba(255, 163, 77, 0.9));
+  border: 2px solid rgba(255, 107, 157, 0.5);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  
+  /* 布局 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* 动画 */
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.gallery-process-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 1), rgba(255, 163, 77, 1));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.5);
+  border-color: rgba(255, 107, 157, 0.8);
+}
+
 .gallery-title {
   font-size: var(--text-lg);
   font-weight: 600;

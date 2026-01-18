@@ -5,6 +5,7 @@ import './styles/split-world.css';
 import './styles/sidebar.css';
 import './styles/cards.css';
 import './styles/modal.css';
+import './styles/video-player.css';
 import './styles/animations.css';
 import './styles/about.css';
 import './styles/reality.css';
@@ -17,6 +18,7 @@ import { ArtWorld } from './components/ArtWorld';
 import { SupportSidebar } from './components/SupportSidebar';
 import { Modal } from './components/Modal';
 import { ImageViewer } from './components/ImageViewer';
+import { VideoPlayer } from './components/VideoPlayer';
 import { AboutSection } from './components/AboutSection';
 import { RealitySection } from './components/RealitySection';
 import { TestamentSection } from './components/TestamentSection';
@@ -61,6 +63,7 @@ class App {
   private supportSidebar: SupportSidebar;
   private modal: Modal;
   private imageViewer: ImageViewer;
+  private videoPlayer: VideoPlayer;
   private aboutSection: AboutSection;
   private realitySection: RealitySection;
   private testamentSection: TestamentSection;
@@ -151,8 +154,29 @@ class App {
         return true;
       
       case ViewState.MAIN:
-        // 主视图可以直接切换（不检查 works-grid）
-        return true;
+        // 主视图：检查是否在垂直布局模式
+        const mainContainer = document.querySelector('#main-container');
+        const isVerticalLayout = mainContainer?.classList.contains('layout-vertical');
+        
+        if (isVerticalLayout) {
+          // 垂直布局：需要同时满足两个条件
+          // 1. 用户已经滚动到美术区域（window.scrollY >= 美术区域的offsetTop）
+          // 2. 美术区域的 works-grid 已经滚动到底部
+          const artWorldElement = this.artWorld.element;
+          const artWorldTop = artWorldElement.offsetTop;
+          const hasScrolledToArtWorld = window.scrollY >= artWorldTop - 100; // 留100px余量
+          
+          if (!hasScrolledToArtWorld) {
+            // 还没滚动到美术区域，不允许切换
+            return false;
+          }
+          
+          // 已经滚动到美术区域，检查是否滚动到底部
+          return this.artWorld.isAtBottom();
+        } else {
+          // 水平布局：可以直接切换（不检查 works-grid）
+          return true;
+        }
       
       case ViewState.ABOUT:
         // 关于页面需要最后一条内容完全可见
@@ -292,6 +316,7 @@ class App {
     this.supportSidebar = new SupportSidebar();
     this.modal = new Modal();
     this.imageViewer = new ImageViewer();
+    this.videoPlayer = new VideoPlayer();
     this.aboutSection = new AboutSection();
     this.realitySection = new RealitySection();
     this.testamentSection = new TestamentSection();
@@ -340,6 +365,9 @@ class App {
     // 添加图片查看器
     document.body.appendChild(this.imageViewer.element);
 
+    // 添加视频播放器
+    document.body.appendChild(this.videoPlayer.element);
+
     // 添加模态窗
     this.app.appendChild(this.modal.element);
 
@@ -354,6 +382,10 @@ class App {
 
     // 初始化滚动动画
     this.initScrollAnimations();
+
+    // 【关键】在所有DOM元素添加完毕后，应用保存的设置
+    // 这样可以确保 #main-container 已经存在于DOM中
+    this.settingsPanel.applyLayoutSetting();
   }
 
   private initParticleEffect(): void {

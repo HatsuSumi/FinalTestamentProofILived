@@ -32,6 +32,7 @@ export interface Artwork {
   videoUrl?: string; // 视频链接（用于动画类作品）
   processImages?: string[]; // 过程图数组（仅用于插画/建模，动画不需要）
   processLabels?: string[]; // 图片标签数组，processLabels[0]对应主图(image)，processLabels[1+]对应processImages[0+]
+  processVideoUrl?: string; // 过程视频链接（用于绘画/建模作品的创作过程视频）
   links?: {
     name: string;   // 显示名称（如 "B站"、"Pixiv"、"ArtStation"）
     url: string;    // 链接地址

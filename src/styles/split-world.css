@@ -376,6 +376,38 @@ body {
   transform: translateY(-2px);
 }
 
+/* 垂直布局模式（仅桌面端生效） */
+@media (min-width: 768px) {
+  #main-container.layout-vertical {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #main-container.layout-vertical #code-world,
+  #main-container.layout-vertical #art-world {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #main-container.layout-vertical #divider {
+    display: none;
+  }
+
+  /* 垂直布局下的卡片网格：增加卡片最小宽度 */
+  #main-container.layout-vertical .works-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+
+/* 垂直布局模式 - 大屏桌面端（有侧边栏） */
+@media (min-width: 1367px) {
+  #main-container.layout-vertical {
+    margin-right: 200px; /* 给右侧赞助侧边栏留出空间 */
+  }
+}
+
 /* 响应式 */
 @media (max-width: 1366px) {
   #code-world,

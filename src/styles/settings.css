@@ -101,6 +101,12 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* 布局选项需要垂直排列 */
+.setting-item:has(.layout-options) {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .setting-info {
   flex: 1;
   padding-right: var(--spacing-md);
@@ -164,6 +170,47 @@ input:checked + .toggle-slider {
 
 input:checked + .toggle-slider:before {
   transform: translateX(22px);
+}
+
+/* 布局选项样式 */
+.layout-options {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  width: 100%;
+}
+
+.layout-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.layout-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.layout-option input[type="radio"] {
+  margin: 0;
+  margin-right: var(--spacing-xs);
+  cursor: pointer;
+}
+
+.layout-option-label {
+  font-size: var(--text-sm);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.layout-option:has(input:checked) {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: var(--code-primary);
 }
 
 /* 禁用扫描线动画的覆盖样式 */

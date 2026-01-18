@@ -59,6 +59,21 @@ export class GalleryItem implements Component {
       this.setupImageNavigation(item);
     }
 
+    // 设置"查看绘画/建模过程"按钮（仅非动画作品且有过程视频时显示）
+    const processBtn = queryIn<HTMLButtonElement>(item, '.gallery-process-btn');
+    if (this.artwork.category !== 'animation' && this.artwork.processVideoUrl) {
+      // 根据类别设置按钮文本
+      const categoryText = this.artwork.category === 'painting' ? '绘画' : '建模';
+      processBtn.textContent = `查看${categoryText}过程`;
+      processBtn.classList.remove('hidden');
+      
+      // 阻止按钮点击事件冒泡到卡片
+      addEvent(processBtn, 'click', (e: Event) => {
+        e.stopPropagation();
+        this.handleProcessBtnClick();
+      });
+    }
+
     // 设置标题（必须存在）
     const title = queryIn(item, '.gallery-title');
     title.innerHTML = this.highlightText(this.artwork.title);
@@ -304,6 +319,14 @@ export class GalleryItem implements Component {
         label.textContent = `图 ${current}/${total}`;
       }
     }
+  }
+
+  private handleProcessBtnClick(): void {
+    // 触发全局事件，打开视频播放器
+    const event = new CustomEvent('openProcessVideo', {
+      detail: this.artwork
+    });
+    window.dispatchEvent(event);
   }
 
   destroy(): void {

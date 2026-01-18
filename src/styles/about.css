@@ -271,6 +271,10 @@
     gap: var(--spacing-xs);
   }
 
+  .about-support-sidebar .sidebar-subtitle {
+    color: var(--white);
+  }
+
   .about-support-sidebar .qrcode-label {
     font-size: var(--text-sm);
     color: var(--gray-300);

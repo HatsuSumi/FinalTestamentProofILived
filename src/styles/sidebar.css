@@ -75,15 +75,25 @@
 .sidebar-title {
   font-size: var(--text-lg);
   font-weight: 600;
-  color: var(--white);
+  color: #1a1a1a;
   text-align: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
   position: relative;
   z-index: 2;
+}
+
+.sidebar-subtitle {
+  font-size: var(--text-sm);
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
 }
 
 .sidebar-icon {
@@ -121,7 +131,7 @@
 
 .qrcode-label {
   font-size: var(--text-sm);
-  color: var(--white);
+  color: #1a1a1a;
   text-align: center;
   margin-bottom: var(--spacing-xs);
   font-weight: 500;

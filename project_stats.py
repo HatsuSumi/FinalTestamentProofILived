@@ -505,8 +505,13 @@ def fmt_bytes(n: int) -> str:
 
 
 def fmt_pct(x: float) -> str:
-    # 一位小数，宽度对齐由外层控制
+    """格式化百分比（带前导空格，用于CLI表格对齐）"""
     return f"{x:5.1f}%"
+
+
+def fmt_pct_compact(x: float) -> str:
+    """格式化百分比（无前导空格，用于Markdown等紧凑输出）"""
+    return f"{x:.1f}%"
 
 
 def adjust_percentages(values: List[float], total: float) -> List[float]:
@@ -1810,7 +1815,7 @@ def generate_markdown_output(res, total_code_files: int, total_lines: int, total
     for i, (t, st) in enumerate(rows):
         name = CODE_TYPE_LABELS.get(t, t)
         line_pct = adjusted_line_pcts[i]
-        lines.append(f"  - {name}：{fmt_int(st.code_lines)} 行（{fmt_pct(line_pct)}）")
+        lines.append(f"  - {name}：{fmt_int(st.code_lines)} 行（{fmt_pct_compact(line_pct)}）")
     
     lines.append("")
     
@@ -1819,7 +1824,7 @@ def generate_markdown_output(res, total_code_files: int, total_lines: int, total
     for i, (t, st) in enumerate(rows):
         name = CODE_TYPE_LABELS.get(t, t)
         char_pct = adjusted_char_pcts[i]
-        lines.append(f"  - {name}：{fmt_int(st.code_chars)} 字符（{fmt_pct(char_pct)}）")
+        lines.append(f"  - {name}：{fmt_int(st.code_chars)} 字符（{fmt_pct_compact(char_pct)}）")
     
     # 如果有资源文件统计
     if res.asset_total_files > 0:

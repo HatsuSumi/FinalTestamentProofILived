@@ -62,7 +62,8 @@ export class VideoPlayer implements Component {
     // 设置视频源
     this.video.src = `${import.meta.env.BASE_URL}${artwork.processVideoUrl.slice(1)}`;
 
-    // 显示播放器
+    // 显示播放器（确保移除 closing 类）
+    this.element.classList.remove('closing');
     this.element.classList.add('active');
     document.body.classList.add('video-player-open');
     this.isOpen = true;
@@ -74,7 +75,11 @@ export class VideoPlayer implements Component {
   }
 
   public close(): void {
-    // 添加关闭动画
+    if (!this.isOpen) return;
+    
+    this.isOpen = false;
+    
+    // 添加关闭动画类
     this.element.classList.add('closing');
     
     // 从 CSS 变量读取动画时长
@@ -90,7 +95,6 @@ export class VideoPlayer implements Component {
       // 隐藏播放器
       this.element.classList.remove('active', 'closing');
       document.body.classList.remove('video-player-open');
-      this.isOpen = false;
     }, duration);
   }
 

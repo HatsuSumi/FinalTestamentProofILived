@@ -247,6 +247,7 @@ export const artworks: Artwork[] = [
       '/assets/artworks/art-11/Chihaya Anon_Original image.png'
     ],
     processLabels: ['细化', '对比', '原图'],
+    processVideoUrl: '/assets/artworks/art-11/Chihaya Anon_Video.mp4',
     links: [
       
     ]

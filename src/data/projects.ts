@@ -180,13 +180,13 @@ export const projects: Project[] = [
     description: '一个功能强大的浏览器扩展，支持12种图片来源检测，提供JPEG、PNG、WebP、GIF、AVIF、SVG六种格式的下载与转换功能。支持防盗链图片下载、动态内容检测、精准定位、高级过滤规则、侧边栏视图等专业功能。',
     tags: ['TypeScript', 'HTML5', 'React', 'Vite', 'Tailwind CSS', 'Chrome Extension'],
     categories: ['extension'],
-    developmentCycle: '3天+',
+    developmentCycle: '7天',
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
-    status: '待发布。',
-    releaseDate: '2026-01',
+    status: '已发布。',
+    releaseDate: '2026-01-28',
     roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
-
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Image-Hawk'}
     ]
   },
   {

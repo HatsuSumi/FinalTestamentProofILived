@@ -1,0 +1,104 @@
+/* CSS 变量定义 - 赛博朋克主题 */
+:root {
+  /* 编程侧 - 科技感配色 */
+  --code-bg: #0a0e27;
+  --code-bg-secondary: #12162e;
+  --code-primary: #00d4ff;
+  --code-secondary: #a855f7;
+  --code-accent: #00ff9d;
+  --code-text: #e0e7ff;
+  
+  /* 美术侧 - 艺术感配色 */
+  --art-bg: #1a1625;
+  --art-bg-secondary: #251d30;
+  --art-primary: #ff6b9d;
+  --art-secondary: #ffa34d;
+  --art-accent: #ffd93d;
+  --art-text: #f5e6ff;
+  
+  /* 分割线 */
+  --divider-gradient: linear-gradient(
+    to bottom,
+    var(--code-primary),
+    var(--art-primary)
+  );
+  
+  /* 右侧边栏 */
+  --sidebar-bg: rgba(255, 255, 255, 0.05);
+  --sidebar-border: linear-gradient(
+    135deg,
+    #ffd700 0%,
+    #ff6b6b 50%,
+    #4ecdc4 100%
+  );
+  
+  /* 通用颜色 */
+  --white: #ffffff;
+  --black-deep: #0a0a0a;
+  --gold: #ffd700;
+  --silver: #c0c0c0;
+  --gray-light: #e0e0e0;
+  --gray-medium: #888888;
+  --gray-300: #e2e8f0;
+  --gray-400: #cbd5e0;
+  --gray-900: #1a202c;
+  --purple-light: #c5cae9;
+  --purple-medium: #9fa8da;
+  
+  /* 阴影 */
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-glow-blue: 0 0 20px rgba(0, 212, 255, 0.5);
+  --shadow-glow-pink: 0 0 20px rgba(255, 107, 157, 0.5);
+  --shadow-glow-gold: 0 0 30px rgba(255, 215, 0, 0.6);
+  
+  /* 间距 */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+  
+  /* 圆角 */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* 过渡 */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+  --transition-duration-base: 300ms; /* 用于自定义 timing-function 的场景 */
+  
+  /* 页面过渡 */
+  --transition-page-intro: 700ms ease;       /* 首屏 → 主视图滚动提示延迟 */
+  
+  /* 分屏动画 */
+  --split-intro-fadeout: 500ms;              /* 首屏淡出时长（包含震动效果） */
+  --split-particle-delay: 300ms;             /* 粒子爆炸延迟 */
+  --split-divider-delay: 600ms;              /* 分割线显示延迟 */
+  --split-sidebar-delay: 900ms;              /* 侧边栏显示延迟 */
+  --split-total-duration: 1500ms;            /* 分屏动画总时长 */
+  --split-animation-duration: 1200ms;        /* 左右分屏滑动时长（对应 CSS transition） */
+  --split-particle-duration: 1000ms;         /* 粒子动画时长 */
+  
+  /* 字体大小 */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  
+  /* Z-index */
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+}
+

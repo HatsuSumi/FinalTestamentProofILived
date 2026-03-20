@@ -21,7 +21,8 @@
   padding: var(--spacing-lg);
   overflow-y: auto;
   overflow-x: hidden;
-  overscroll-behavior: contain; /* 阻止滚动链，防止滚动传播到外部 */
+  overscroll-behavior: auto;
+  -webkit-overflow-scrolling: touch; 
 }
 
 /* 滚动条样式 */

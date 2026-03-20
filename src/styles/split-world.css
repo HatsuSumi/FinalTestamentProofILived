@@ -248,8 +248,109 @@ body {
   border-left: 3px solid #ffd700;
   opacity: 1;
   font-style: italic;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: fit-content;
+}
+
+/* 折叠通知容器 */
+.notices-collapse {
+  position: relative;
   margin-bottom: var(--spacing-lg);
-  margin-top: calc(var(--spacing-lg) * -0.5);
+  padding-bottom: 4px; /* 防止箭头底部被截断 */
+  flex-shrink: 0; /* 防止在 flex 容器中被压缩 */
+}
+
+/* 通知内容区域 */
+.notices-body {
+  overflow: hidden;
+  max-height: 38px; /* 折叠时只露出第一条一行 */
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              -webkit-mask-image 0.45s ease,
+              mask-image 0.45s ease;
+}
+
+.notices-body > * {
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+}
+
+.notices-body > *:last-child {
+  margin-bottom: 0;
+}
+
+/* 展开状态 */
+.notices-collapse.expanded .notices-body {
+  max-height: 600px;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* 箭头按钮 */
+.notices-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 24px;
+  margin-top: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.notices-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 箭头图标 */
+.notices-arrow {
+  width: 20px;
+  height: 20px;
+  color: rgba(255, 255, 255, 0.75);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.notices-collapse.expanded .notices-arrow {
+  transform: rotate(180deg);
+}
+
+.notices-toggle:hover .notices-arrow {
+  color: rgba(255, 255, 255, 1);
+}
+
+.passion-notice {
+  font-size: var(--text-sm);
+  color: #ff9f43;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 3px solid #ff9f43;
+  opacity: 1;
+  font-style: italic;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: fit-content;
+}
+
+.depression-notice {
+  font-size: var(--text-sm);
+  color: #a29bcc;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 3px solid #a29bcc;
+  opacity: 1;
+  font-style: italic;
+  margin-bottom: 0;
+  margin-top: 0;
   max-width: fit-content;
 }
 
@@ -262,8 +363,8 @@ body {
   border-left: 3px solid #ff4757;
   opacity: 1;
   font-style: italic;
-  margin-bottom: var(--spacing-lg);
-  margin-top: calc(var(--spacing-lg) * -0.5);
+  margin-bottom: 0;
+  margin-top: 0;
   max-width: fit-content;
 }
 
@@ -435,6 +536,12 @@ body {
   .blur-disclaimer {
     display: none; /* 平板端隐藏模糊提示 */
   }
+
+  /* passion-notice 和 depression-notice 平板端保持显示 */
+  .passion-notice,
+  .depression-notice {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
@@ -467,6 +574,32 @@ body {
     overflow: visible; /* 不裁剪内容 */
     display: flex;
     flex-direction: column;
+  }
+
+  /* 移动端折叠通知 */
+  .notices-collapse {
+    flex-shrink: 0;
+  }
+
+  .notices-body {
+    max-height: 44px; /* 移动端字体稍大，给多一点空间显示第一条 */
+  }
+
+  .notices-collapse.expanded .notices-body {
+    max-height: 800px;
+  }
+
+  /* 移动端箭头按钮确保可见 */
+  .notices-toggle {
+    display: flex;
+    height: 32px;
+    margin-top: 8px;
+  }
+
+  .notices-arrow {
+    width: 24px;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.9);
   }
   
   .works-grid {

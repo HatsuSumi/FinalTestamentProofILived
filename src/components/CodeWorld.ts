@@ -2,6 +2,7 @@ import type { Component, Project } from '../types';
 import { projects } from '../data/projects';
 import { ProjectCard } from './ProjectCard';
 import { cloneTemplate, queryIn, addEvent } from '../utils/template';
+import { NoticesState } from '../utils/noticesState';
 
 export class CodeWorld implements Component {
   element: HTMLElement;
@@ -27,6 +28,25 @@ export class CodeWorld implements Component {
     const searchInput = queryIn<HTMLInputElement>(container, '#code-search');
     this.setupSearch(searchInput);
     
+    // 折叠通知
+    const collapse = container.querySelector('.notices-collapse') as HTMLElement;
+    const toggleBtn = container.querySelector('.notices-toggle') as HTMLButtonElement;
+    if (collapse && toggleBtn) {
+      // 从 localStorage 读取状态
+      if (NoticesState.isExpanded()) {
+        collapse.classList.add('expanded');
+      }
+      
+      toggleBtn.addEventListener('click', () => {
+        const isExpanded = NoticesState.toggle();
+        if (isExpanded) {
+          collapse.classList.add('expanded');
+        } else {
+          collapse.classList.remove('expanded');
+        }
+      });
+    }
+
     // 作品网格
     const grid = queryIn<HTMLElement>(container, '#projects-grid');
     this.renderProjects(grid);

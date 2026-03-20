@@ -91,6 +91,20 @@
   color: #88ccff;
 }
 
+/* 高亮文本样式 */
+.testament-text mark {
+  background: rgba(255, 215, 0, 0.15);
+  color: inherit;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.testament-text mark:hover {
+  background: rgba(255, 215, 0, 0.25);
+}
+
 /* 注释区域 */
 .testament-footnotes {
   margin-top: 100px;

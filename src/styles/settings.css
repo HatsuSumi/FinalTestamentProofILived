@@ -227,5 +227,10 @@ body.no-scanline .scanline::after {
     width: 40px;
     height: 40px;
   }
+
+  /* 移动端隐藏布局设置项（移动端强制垂直布局） */
+  .setting-item:has(.layout-options) {
+    display: none;
+  }
 }
 

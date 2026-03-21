@@ -88,7 +88,8 @@ FinalTestamentProofILived/
 │   │   ├── scroll.ts         # 自定义滚动
 │   │   ├── lazyLoad.ts       # 图片懒加载
 │   │   ├── animations.ts     # 动画工具
-│   │   └── css.ts            # CSS变量读取工具
+│   │   ├── css.ts            # CSS变量读取工具
+│   │   └── noticesState.ts   # 公告栏折叠状态持久化（localStorage）
 │   └── types/                # TypeScript类型定义
 │       └── index.ts
 ├── index.html                 # 主HTML文件 + 所有模板定义

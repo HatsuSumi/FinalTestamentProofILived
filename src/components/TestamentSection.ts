@@ -93,6 +93,7 @@ export class TestamentSection implements Component {
       { text: '到头来，一分钱都没赚。' },
       { text: '<mark>免费的项目，几乎不会有用户主动赞助。</mark>' },
       { text: '<mark>这是事实。</mark>' },
+      { text: '当然，没钱活不了。这样想来，我的结局大概也只能是死亡。不过，<mark>我并不畏惧。</mark>' },      
       { text: '所以，<mark>如果我最终真的能做到为爱发电到死，这对我来说，已经算是一种前所未有的完成。</mark>' },
       { text: '而我真正希望的结果，是死后能上新闻，是我的事迹能被更多人知道。' },
       { text: '<mark>至少那样，能证明我不是从头到尾都没有被看见。</mark>' }

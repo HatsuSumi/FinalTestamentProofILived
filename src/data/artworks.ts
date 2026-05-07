@@ -194,7 +194,7 @@ export const artworks: Artwork[] = [
     category: 'painting',
     tags: ['线稿', '临摹', '蕾雅', '《地平线行者》'],
     description: '绘画总用时：13h24m31s，原图分辨率：2048*2048，临摹用分辨率：1201*1506。',
-    date: '2025-01-03-01-06',
+    date: '2026-01-03-01-06',
     creationCycle: '4天',
     creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     processImages:
@@ -216,7 +216,7 @@ export const artworks: Artwork[] = [
     category: 'painting',
     tags: ['线稿', '临摹', '高松灯', '《BanG Dream!》', 'MyGo!!!!!'],
     description: '绘画总用时：3h47m42s，原图分辨率：1000*1514，临摹用分辨率：1000*1514。',
-    date: '2025-01-10-01-11',
+    date: '2026-01-10-01-11',
     creationCycle: '2天',
     creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     processImages:
@@ -238,7 +238,7 @@ export const artworks: Artwork[] = [
     category: 'painting',
     tags: ['线稿', '临摹', '千早爱音', '《BanG Dream!》', 'MyGo!!!!!'],
     description: '绘画总用时：5h34m32s，原图分辨率：1000*1514，临摹用分辨率：1000*1514。',
-    date: '2025-01-16-01-17',
+    date: '2026-01-16-01-17',
     creationCycle: '2天',
     creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     processImages:
@@ -248,6 +248,72 @@ export const artworks: Artwork[] = [
     ],
     processLabels: ['细化', '对比', '原图'],
     processVideoUrl: '/assets/artworks/art-11/Chihaya Anon_Video.mp4',
+    links: [
+      
+    ]
+  },
+  {
+    id: 'art-12',
+    title: '《BanG Dream!》系列角色要乐奈立绘临摹',
+    image: '/assets/artworks/art-12/Kaname Rāna_Refinement.png',
+    thumbnail: '/assets/artworks/art-12/Kaname Rāna_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '要乐奈', '《BanG Dream!》', 'MyGo!!!!!'],
+    description: '绘画总用时：2h53m5s，原图分辨率：1000*1514，临摹用分辨率：1000*1514。',
+    date: '2025-04-26',
+    creationCycle: '1天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-12/Kaname Rāna_Comparison.png',
+      '/assets/artworks/art-12/Kaname Rāna_Original image.png'
+    ],
+    processLabels: ['细化', '对比', '原图'],
+    processVideoUrl: '/assets/artworks/art-11/Kaname Rāna_Video.mp4',
+    links: [
+      
+    ]
+  },
+  {
+    id: 'art-13',
+    title: '《BanG Dream!》系列角色长崎爽世立绘临摹',
+    image: '/assets/artworks/art-13/Nagasaki Soyo_Refinement.png',
+    thumbnail: '/assets/artworks/art-13/Nagasaki Soyo_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '长崎爽世', '《BanG Dream!》', 'MyGo!!!!!'],
+    description: '绘画总用时：2h33m16s，原图分辨率：1000*1514，临摹用分辨率：1000*1514。',
+    date: '2025-04-27',
+    creationCycle: '1天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-13/Nagasaki Soyo_Comparison.png',
+      '/assets/artworks/art-13/Nagasaki Soyo_Original image.png'
+    ],
+    processLabels: ['细化', '对比', '原图'],
+    processVideoUrl: '/assets/artworks/art-11/Nagasaki Soyo_Video.mp4',
+    links: [
+      
+    ]
+  },
+  {
+    id: 'art-14',
+    title: '《BanG Dream!》系列角色椎名立希立绘临摹',
+    image: '/assets/artworks/art-14/Shiina Taki_Refinement.png',
+    thumbnail: '/assets/artworks/art-14/Shiina Taki_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '椎名立希', '《BanG Dream!》', 'MyGo!!!!!'],
+    description: '绘画总用时：1h51m13s，原图分辨率：1000*1514，临摹用分辨率：1000*1514。',
+    date: '2025-04-28',
+    creationCycle: '1天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-13/Shiina Taki_Comparison.png',
+      '/assets/artworks/art-13/Shiina Taki_Original image.png'
+    ],
+    processLabels: ['细化', '对比', '原图'],
+    processVideoUrl: '/assets/artworks/art-14/Shiina Taki_Video.mp4',
     links: [
       
     ]

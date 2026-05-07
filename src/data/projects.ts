@@ -52,7 +52,7 @@ export const projects: Project[] = [
     roles: ['架构设计', '数据分析', '前端', 'UI/UX', '后端', '测试', '维护'],
     links: [
       { name: 'B站', url: 'https://www.bilibili.com/video/BV1KLPLeXEwN/' },
-      { name: 'GitHub', url: 'https://github.com/HatsuSumi/ISML-2024/' },
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Animative-Viz' },
     ]
   },
   {

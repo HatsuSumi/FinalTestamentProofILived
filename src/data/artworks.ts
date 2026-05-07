@@ -269,7 +269,7 @@ export const artworks: Artwork[] = [
       '/assets/artworks/art-12/Kaname Rāna_Original image.png'
     ],
     processLabels: ['细化', '对比', '原图'],
-    processVideoUrl: '/assets/artworks/art-11/Kaname Rāna_Video.mp4',
+    processVideoUrl: '/assets/artworks/art-12/Kaname Rāna_Video.mp4',
     links: [
       
     ]
@@ -291,7 +291,7 @@ export const artworks: Artwork[] = [
       '/assets/artworks/art-13/Nagasaki Soyo_Original image.png'
     ],
     processLabels: ['细化', '对比', '原图'],
-    processVideoUrl: '/assets/artworks/art-11/Nagasaki Soyo_Video.mp4',
+    processVideoUrl: '/assets/artworks/art-13/Nagasaki Soyo_Video.mp4',
     links: [
       
     ]
@@ -309,8 +309,8 @@ export const artworks: Artwork[] = [
     creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     processImages:
     [
-      '/assets/artworks/art-13/Shiina Taki_Comparison.png',
-      '/assets/artworks/art-13/Shiina Taki_Original image.png'
+      '/assets/artworks/art-14/Shiina Taki_Comparison.png',
+      '/assets/artworks/art-14/Shiina Taki_Original image.png'
     ],
     processLabels: ['细化', '对比', '原图'],
     processVideoUrl: '/assets/artworks/art-14/Shiina Taki_Video.mp4',

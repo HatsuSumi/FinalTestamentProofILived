@@ -5,7 +5,7 @@ export interface Project {
   subtitle: string; // 项目副标题（英文名/文件夹名）
   description: string;
   tags: string[];
-  categories: ('web' | 'software' | 'game' | 'script' | 'extension')[]; // 项目类别（可多选）
+  categories: ('web' | 'mobile-app' | 'desktop-app' | 'game' | 'script' | 'extension')[]; // 项目类别（可多选）
   developmentCycle: string; // 开发周期（如：30天、2周、3个月、持续维护中等）
   developmentEnvironment: string; // 开发环境
   status: string; // 项目状态（如：开发中、已完成、已上线、持续维护中等）

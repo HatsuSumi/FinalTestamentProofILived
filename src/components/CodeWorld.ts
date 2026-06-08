@@ -58,7 +58,8 @@ export class CodeWorld implements Component {
     const filters = [
       { label: '全部', value: 'all' },
       { label: 'Web', value: 'web' },
-      { label: '软件', value: 'software' },
+      { label: '移动应用', value: 'mobile-app' },
+      { label: '桌面应用', value: 'desktop-app' },
       { label: '游戏', value: 'game' },
       { label: '工具脚本', value: 'script' },
       { label: '浏览器插件', value: 'extension' }
@@ -107,9 +108,9 @@ export class CodeWorld implements Component {
 
   private applyFilters(): void {
     // 先按类别筛选
-    let filtered = this.currentFilter === 'all' 
-      ? this.projects 
-      : this.projects.filter(p => p.categories.includes(this.currentFilter as 'web' | 'software' | 'game' | 'script' | 'extension'));
+    let filtered = this.currentFilter === 'all'
+      ? this.projects
+      : this.projects.filter(p => p.categories.includes(this.currentFilter as 'web' | 'mobile-app' | 'desktop-app' | 'game' | 'script' | 'extension'));
     
     // 再按搜索词筛选
     if (this.searchQuery) {
@@ -221,4 +222,3 @@ export class CodeWorld implements Component {
     }
   }
 }
-

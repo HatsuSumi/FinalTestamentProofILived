@@ -26,7 +26,8 @@ export class ProjectCard implements Component {
     const categoryBadgesContainer = queryIn<HTMLElement>(card, '.project-category-badges');
     const categoryMap: Record<string, string> = {
       web: 'Web',
-      software: '软件',
+      'mobile-app': '移动应用',
+      'desktop-app': '桌面应用',
       game: '游戏',
       script: '工具脚本',
       extension: '浏览器插件'

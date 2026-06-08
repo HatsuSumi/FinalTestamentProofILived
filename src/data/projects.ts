@@ -33,7 +33,7 @@ export const projects: Project[] = [
     roles: ['架构设计', '数据分析', '前端', 'UI/UX', '测试', '维护'],
     links: [
       { name: 'B站', url: 'https://www.bilibili.com/video/BV1mci1YiE4M/' },
-      { name: '贴吧', url: 'https://tieba.baidu.com/p/9228689566' },
+      { name: '贴吧', url: 'https://tieba.baidu.com/p/9228689566/' },
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/ISML2023-Visualization/' },
       { name: '主页', url: 'https://hatsusumi.github.io/ISML2023-Visualization/'}
     ]
@@ -49,10 +49,10 @@ export const projects: Project[] = [
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '已完成。',
     releaseDate: '视频2025-02-26，源码2025-12-23',
-    roles: ['架构设计', '数据分析', '前端', 'UI/UX', '后端', '测试', '维护'],
+    roles: ['架构设计', '接口设计', '数据分析', '前端', 'UI/UX', '后端', '测试', '维护'],
     links: [
       { name: 'B站', url: 'https://www.bilibili.com/video/BV1KLPLeXEwN/' },
-      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Animative-Viz' },
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Animative-Viz/' },
     ]
   },
   {
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     releaseDate: '2025-02-14',
     roles: ['架构设计', '数据分析', '前端', 'UI/UX', '测试', '维护'],
     links: [
-      { name: '贴吧', url: 'https://tieba.baidu.com/p/9493543244' },
+      { name: '贴吧', url: 'https://tieba.baidu.com/p/9493543244/' },
       { name: 'GitHub', url: 'https://github.com/HatsuSumi/ISML-2024/' },
       { name: '主页', url: 'https://hatsusumi.github.io/ISML-2024/'}
     ]
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
       { name: 'B站', url: 'https://www.bilibili.com/video/BV1iySjBcEwy/'},
-      { name: 'GitHub', url: 'https://github.com/HatsuSumi/CardScroller'},
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/CardScroller/'},
       { name: '主页', url: 'https://hatsusumi.github.io/CardScroller/'}
     ]
   },
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     releaseDate: '2025-12-31',
     roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
-      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Racehorse-Memorial'},
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Racehorse-Memorial/'},
       { name: '主页', url: 'https://hatsusumi.github.io/Racehorse-Memorial/'}
     ]
   },
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     releaseDate: '2025-12-31',
     roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
-      { name: 'GitHub', url: 'https://github.com/HatsuSumi/FinalTestamentProofILived'},
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/FinalTestamentProofILived/'},
       { name: '主页', url: 'https://hatsusumi.github.io/FinalTestamentProofILived/'}
     ]
   },
@@ -186,11 +186,29 @@ export const projects: Project[] = [
     releaseDate: '2026-01-28',
     roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
     links: [
-      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Image-Hawk'}
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Image-Hawk/'}
     ]
   },
   {
     id: 'project-11',
+    title: '错过了么',
+    subtitle: 'serendipity',
+    description: '一个移动应用，情感记录类应用，专注于记录日常生活中擦肩而过的人或瞬间。',
+    tags: ['flutter', 'dart', 'nodejs', 'typescript', 'express', 'postgresql', 'prisma', 'nextjs', 'android'],
+    categories: ['mobile-app'],
+    developmentCycle: '80天',
+    developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    status: '已发布。',
+    releaseDate: '2026-06-07',
+    roles: ['前端', '后端', '架构设计', '接口设计', '数据库设计', 'UI/UX', '测试', '运维'],
+    links: [
+      { name: 'B站', url: 'https://www.bilibili.com/video/BV1DXEt6LErS/'},
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/Serendipity/'},
+      { name: '官网', url: 'https://serendipity.hatsusumi.com/'}
+    ]
+  },
+  {
+    id: 'project-12',
     title: '未来的独立游戏项目',
     subtitle: 'Future-Game',
     description: '一个未来的独立游戏项目，目前正在构思中，属于超先导预告了。',
@@ -202,6 +220,6 @@ export const projects: Project[] = [
     releaseDate: 'YYYY-MM-DD',
     roles: ['程序', '美术', '音乐', '策划', '剧本'],
     links: []
-  },
+  }
 ];
 

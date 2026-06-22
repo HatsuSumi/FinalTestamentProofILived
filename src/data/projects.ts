@@ -209,6 +209,22 @@ export const projects: Project[] = [
   },
   {
     id: 'project-12',
+    title: '二次元角色与作品资料数据库',
+    subtitle: 'anime-character-database',
+    description: '一个基于 JSON 维护的二次元角色与作品资料数据库。',
+    tags: ['json-dataset', 'anime', 'otaku', 'anime-database', 'anime-characters'],
+    categories: ['other'],
+    developmentCycle: '-',
+    developmentEnvironment: '居家维护，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    status: '已发布。',
+    releaseDate: '2026-06-21',
+    roles: ['数据录入', '维护'],
+    links: [
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/anime-character-database/'}
+    ]
+  },
+  {
+    id: 'project-13',
     title: '未来的独立游戏项目',
     subtitle: 'Future-Game',
     description: '一个未来的独立游戏项目，目前正在构思中，属于超先导预告了。',

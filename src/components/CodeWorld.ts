@@ -62,7 +62,8 @@ export class CodeWorld implements Component {
       { label: '桌面应用', value: 'desktop-app' },
       { label: '游戏', value: 'game' },
       { label: '工具脚本', value: 'script' },
-      { label: '浏览器插件', value: 'extension' }
+      { label: '浏览器插件', value: 'extension' },
+      { label: '其他', value: 'other' }
     ];
     
     filters.forEach(filter => {
@@ -110,7 +111,7 @@ export class CodeWorld implements Component {
     // 先按类别筛选
     let filtered = this.currentFilter === 'all'
       ? this.projects
-      : this.projects.filter(p => p.categories.includes(this.currentFilter as 'web' | 'mobile-app' | 'desktop-app' | 'game' | 'script' | 'extension'));
+      : this.projects.filter(p => p.categories.includes(this.currentFilter as Project['categories'][number]));
     
     // 再按搜索词筛选
     if (this.searchQuery) {

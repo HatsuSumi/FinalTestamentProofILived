@@ -317,6 +317,50 @@ export const artworks: Artwork[] = [
     links: [
       
     ]
-  }
+  },
+  {
+    id: 'art-15',
+    title: '《BanG Dream!》系列角色丰川祥子临摹',
+    image: '/assets/artworks/art-15/Togawa Sakiko_Refinement.png',
+    thumbnail: '/assets/artworks/art-15/Togawa Sakiko_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '丰川祥子', '《BanG Dream!》'],
+    description: '绘画总用时：2h04m05s，原图分辨率：1200*1200，临摹用分辨率：1200*1200。',
+    date: '2025-06-12', 
+    creationCycle: '1天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-15/Togawa Sakiko_Comparison.png',
+      '/assets/artworks/art-15/Shiina Taki_Original image.png'
+    ],
+    processLabels: ['线稿', '对比', '原图'],
+    processVideoUrl: '/assets/artworks/art-14/Shiina Taki_Video.mp4',
+    links: [
+      
+    ]
+  },
+  {
+    id: 'art-16',
+    title: '手游《地平线行者》伊冯娜角色立绘临摹',
+    image: '/assets/artworks/art-16/Everette_Refinement.png',
+    thumbnail: '/assets/artworks/art-16/Everette_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '伊冯娜', '《地平线行者》'],
+    description: '绘画总用时：3h07m36s，原图分辨率：2048*2048，临摹用分辨率：2048*2408。',
+    date: '2026-06-13-06-14',
+    creationCycle: '2天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-16/Yvonna_Line art.png',
+      '/assets/artworks/art-16/Yvonna_Comparison.png',
+      '/assets/artworks/art-16/Yvonna_Original image.png'
+    ],
+    processLabels: ['细化', '线稿', '对比', '原图'],
+    links: [
+      { name: 'GameKee帖子', url: 'https://www.gamekee.com/hw/708815.html' }
+    ]
+  },
 ];
 

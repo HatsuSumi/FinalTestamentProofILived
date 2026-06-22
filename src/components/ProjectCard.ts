@@ -30,7 +30,8 @@ export class ProjectCard implements Component {
       'desktop-app': '桌面应用',
       game: '游戏',
       script: '工具脚本',
-      extension: '浏览器插件'
+      extension: '浏览器插件',
+      other: '其他'
     };
     
     this.project.categories.forEach(category => {

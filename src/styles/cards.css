@@ -137,6 +137,12 @@
   border: 1px solid rgba(168, 85, 247, 1);
 }
 
+.project-category-badge[data-category="other"] {
+  background: rgba(148, 163, 184, 0.9);
+  color: var(--code-bg);
+  border: 1px solid rgba(148, 163, 184, 1);
+}
+
 .project-content {
   display: flex;
   flex-direction: column;

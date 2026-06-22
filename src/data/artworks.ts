@@ -335,7 +335,7 @@ export const artworks: Artwork[] = [
       '/assets/artworks/art-15/Shiina Taki_Original image.png'
     ],
     processLabels: ['线稿', '对比', '原图'],
-    processVideoUrl: '/assets/artworks/art-14/Shiina Taki_Video.mp4',
+    processVideoUrl: '/assets/artworks/art-15/Togawa Sakiko_Video.mp4',
     links: [
       
     ]

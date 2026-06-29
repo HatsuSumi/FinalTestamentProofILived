@@ -192,7 +192,7 @@ export const artworks: Artwork[] = [
     image: '/assets/artworks/art-9/Everette_Refinement.png',
     thumbnail: '/assets/artworks/art-9/Everette_Refinement.png',
     category: 'painting',
-    tags: ['线稿', '临摹', '蕾雅', '《地平线行者》'],
+    tags: ['线稿', '临摹', '艾弗里特', '《地平线行者》'],
     description: '绘画总用时：13h24m31s，原图分辨率：2048*2048，临摹用分辨率：1201*1506。',
     date: '2026-01-03-01-06',
     creationCycle: '4天',
@@ -343,8 +343,8 @@ export const artworks: Artwork[] = [
   {
     id: 'art-16',
     title: '手游《地平线行者》伊冯娜角色立绘临摹',
-    image: '/assets/artworks/art-16/Everette_Refinement.png',
-    thumbnail: '/assets/artworks/art-16/Everette_Refinement.png',
+    image: '/assets/artworks/art-16/Yvonna_Refinement.png',
+    thumbnail: '/assets/artworks/art-16/Yvonna_Refinement.png',
     category: 'painting',
     tags: ['线稿', '临摹', '伊冯娜', '《地平线行者》'],
     description: '绘画总用时：3h07m36s，原图分辨率：2048*2048，临摹用分辨率：2048*2408。',
@@ -356,6 +356,28 @@ export const artworks: Artwork[] = [
       '/assets/artworks/art-16/Yvonna_Line art.png',
       '/assets/artworks/art-16/Yvonna_Comparison.png',
       '/assets/artworks/art-16/Yvonna_Original image.png'
+    ],
+    processLabels: ['细化', '线稿', '对比', '原图'],
+    links: [
+      { name: 'GameKee帖子', url: 'https://www.gamekee.com/hw/708815.html' }
+    ]
+  },
+  {
+    id: 'art-17',
+    title: '手游《地平线行者》瓦莱塔角色立绘临摹',
+    image: '/assets/artworks/art-17/Yaleta_Refinement.png',
+    thumbnail: '/assets/artworks/art-16/Yaleta_Refinement.png',
+    category: 'painting',
+    tags: ['线稿', '临摹', '瓦莱塔', '《地平线行者》'],
+    description: '绘画总用时：5h20m04s，原图分辨率：1678*2885，临摹用分辨率：1678*2885。',
+    date: '2026-06-28-06-29',
+    creationCycle: '2天',
+    creationEnvironment: '居家创作，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    processImages:
+    [
+      '/assets/artworks/art-17/Yaleta_Line art.png',
+      '/assets/artworks/art-17/Yaleta_Comparison.png',
+      '/assets/artworks/art-17/Yaleta_Original image.png'
     ],
     processLabels: ['细化', '线稿', '对比', '原图'],
     links: [

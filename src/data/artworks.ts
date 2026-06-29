@@ -332,7 +332,7 @@ export const artworks: Artwork[] = [
     processImages:
     [
       '/assets/artworks/art-15/Togawa Sakiko_Comparison.png',
-      '/assets/artworks/art-15/Shiina Taki_Original image.png'
+      '/assets/artworks/art-15/Togawa Sakiko_Original image.png'
     ],
     processLabels: ['线稿', '对比', '原图'],
     processVideoUrl: '/assets/artworks/art-15/Togawa Sakiko_Video.mp4',

@@ -225,6 +225,40 @@ export const projects: Project[] = [
   },
   {
     id: 'project-13',
+    title: '国际最萌大会2026赛季数据观测项目',
+    subtitle: 'ISM2026-data-observatory',
+    description: '一个基于 Python 和 Web 技术的数据可视化项目，旨在分析和展示 2026 年国际最萌大会（ISML）的投票数据。保留数据分析，数据统计，数据对比和数据可视化。',
+    tags: ['Python', 'Pandas', 'JavaScript', 'ECharts', 'HTML5', 'CSS3', 'Canvas API', '静态网站'],
+    categories: ['web', 'script'],
+    developmentCycle: '39天+',
+    developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    status: '已发布。',
+    releaseDate: '2026-09-11',
+    roles: ['架构设计', '数据分析', '前端', 'UI/UX', '测试', '维护'],
+    links: [
+      { name: '贴吧', url: 'https://tieba.baidu.com/p/11015552187/'},
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/isml2026-data-observatory/'},
+      { name: '主页', url: 'https://hatsusumi.github.io/isml2026-data-observatory/'}
+    ]
+  },
+  {
+    id: 'project-14',
+    title: '项目规模统计工具项目',
+    subtitle: 'project_scope',
+    description: '跨平台桌面项目统计工具，用于分析项目文件、代码规模和资源占用，并生成清晰易读的统计报告。',
+    tags: ['C#', '.NET 8', 'Avalonia UI', 'MVVM', 'CommunityToolkit.Mvvm'],
+    categories: ['desktop-app'],
+    developmentCycle: '3天',
+    developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    status: '已发布。',
+    releaseDate: '2026-10-16',
+    roles: ['架构设计', 'UI/UX', '测试', '维护'],
+    links: [
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/ProjectScope'},
+    ]
+  },
+  {
+    id: 'project-15',
     title: '未来的独立游戏项目',
     subtitle: 'Future-Game',
     description: '一个未来的独立游戏项目，目前正在构思中，属于超先导预告了。',

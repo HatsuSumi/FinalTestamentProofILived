@@ -366,7 +366,7 @@ export const artworks: Artwork[] = [
     id: 'art-17',
     title: '手游《地平线行者》瓦莱塔角色立绘临摹',
     image: '/assets/artworks/art-17/Yaleta_Refinement.png',
-    thumbnail: '/assets/artworks/art-16/Yaleta_Refinement.png',
+    thumbnail: '/assets/artworks/art-17/Yaleta_Refinement.png',
     category: 'painting',
     tags: ['线稿', '临摹', '瓦莱塔', '《地平线行者》'],
     description: '绘画总用时：5h20m04s，原图分辨率：1678*2885，临摹用分辨率：1678*2885。',

@@ -259,6 +259,23 @@ export const projects: Project[] = [
   },
   {
     id: 'project-15',
+    title: '个人网站（乐观版）（本站）项目',
+    subtitle: 'HatsuSumi-Portfolio',
+    description: '一个记录个人编程、美术、音乐与持续创作经历的作品集网站。网站展示美术作品、创作过程、编程项目、技术栈、工作环境以及支持独立创作的方式。',
+    tags: ['TypeScript', 'Vite', 'Vanilla DOM', 'HTML5', 'CSS3', 'SPA', '响应式设计', '静态网站'],
+    categories: ['web'],
+    developmentCycle: '1天',
+    developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
+    status: '持续更新中。',
+    releaseDate: '2026-10-29',
+    roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
+    links: [
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/HatsuSumi-Portfolio/' },
+      { name: '主页', url: 'https://hatsusumi.github.io/HatsuSumi-Portfolio/' }
+    ]
+  },
+  {
+    id: 'project-16',
     title: '未来的独立游戏项目',
     subtitle: 'Future-Game',
     description: '一个未来的独立游戏项目，目前正在构思中，属于超先导预告了。',

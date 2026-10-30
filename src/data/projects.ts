@@ -264,7 +264,7 @@ export const projects: Project[] = [
     description: '一个记录个人编程、美术、音乐与持续创作经历的作品集网站。网站展示美术作品、创作过程、编程项目、技术栈、工作环境以及支持独立创作的方式。',
     tags: ['TypeScript', 'Vite', 'Vanilla DOM', 'HTML5', 'CSS3', 'SPA', '静态网站'],
     categories: ['web'],
-    developmentCycle: '1天',
+    developmentCycle: '2天',
     developmentEnvironment: '居家开发，没有工作，没有收入，在抑郁症和孤独的陪伴下。',
     status: '持续更新中。',
     releaseDate: '2026-10-29',
